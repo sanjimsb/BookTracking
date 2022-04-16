@@ -1,0 +1,37 @@
+﻿@page
+@using Book_Tracking_Models;
+@model Book_Tracking.Pages.AddBookCategoryModel
+@{
+}
+
+<section class="add-todo-wrapper">
+    <div class="container">
+        <div class="add-todo-title__wrap">
+            <h1>Add Book Category</h1>
+        </div>
+        <div class="todo-form__wrap">
+            <form method="post">
+                <div class="form-group">
+                    <input asp-for="BookCategory.NameToken" placeholder="Category Type" required />
+                </div>
+                <div class="form-group">
+                    <input asp-for="BookCategory.Description" placeholder="Category Name" required />
+                </div>
+                <div class="form-group">
+                    <select asp-for="BookCategory.CategoryTypesId">
+                       @{
+                           if (Model.BookCatTypes != null) {
+                               @foreach (CategoryTypes item in Model.BookCatTypes) {
+                                <option value="@item.Id">@item.Name</option>
+                               }
+                           }
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Add Category Type" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

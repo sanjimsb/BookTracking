@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.19
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book-Tracking", "Book-Tracking\Book-Tracking.csproj", "{22EE3317-3779-4017-8EDC-853121DF57F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book-Tracking-Models", "Book-Tracking-Models\Book-Tracking-Models.csproj", "{96A0A6D7-749D-4F23-A03A-8506CC48DE5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book-Tracking-Context", "Book-Tracking-Context\Book-Tracking-Context.csproj", "{42073B79-FCFF-461C-8358-0641B4074B63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book-Tracking-Migration", "Book-Tracking-Migration\Book-Tracking-Migration.csproj", "{1EA23F42-94A0-49AB-B195-20EEBEFB1167}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22EE3317-3779-4017-8EDC-853121DF57F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22EE3317-3779-4017-8EDC-853121DF57F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22EE3317-3779-4017-8EDC-853121DF57F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22EE3317-3779-4017-8EDC-853121DF57F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96A0A6D7-749D-4F23-A03A-8506CC48DE5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96A0A6D7-749D-4F23-A03A-8506CC48DE5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96A0A6D7-749D-4F23-A03A-8506CC48DE5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96A0A6D7-749D-4F23-A03A-8506CC48DE5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42073B79-FCFF-461C-8358-0641B4074B63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42073B79-FCFF-461C-8358-0641B4074B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42073B79-FCFF-461C-8358-0641B4074B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42073B79-FCFF-461C-8358-0641B4074B63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EA23F42-94A0-49AB-B195-20EEBEFB1167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA23F42-94A0-49AB-B195-20EEBEFB1167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA23F42-94A0-49AB-B195-20EEBEFB1167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA23F42-94A0-49AB-B195-20EEBEFB1167}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF09AF91-C76D-4C56-86BE-DE655252C31C}
+	EndGlobalSection
+EndGlobal
