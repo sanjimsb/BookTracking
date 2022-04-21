@@ -25,6 +25,7 @@ namespace Book_Tracking
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddResponseCaching();
             services.AddRazorPages();
             services.AddDbContext<BookContext>(builder => {
                 builder.UseSqlite("Name=ConnectionStrings:BooksDB-sqlite", b => b.MigrationsAssembly("Book-Tracking-Migration"));
@@ -45,6 +46,18 @@ namespace Book_Tracking
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseResponseCaching();
+
+            app.Use(async (context, next) =>
+            {
+                new Microsoft.Net.Http.Headers.CacheControlHeaderValue()
+                {
+                    Public = true,
+                    MaxAge = TimeSpan.FromDays(365)
+                };
+
+                await next();
+            });
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
