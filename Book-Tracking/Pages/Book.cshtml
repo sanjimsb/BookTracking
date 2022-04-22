@@ -1,0 +1,22 @@
+﻿@page
+@model Book_Tracking.Pages.BookModel
+@{
+}
+
+<section class="book-listing">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="book-listing__item">
+                    <h2>@Model.Book.Title</h2>
+                    <span>Author: @Model.Book.Author</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Schema
+{
+    <partial name="Schema/_books" for="Book" />
+}

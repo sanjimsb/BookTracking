@@ -17,11 +17,13 @@ namespace Book_Tracking.Pages
 
         public ICollection<Books> Books { get; set; }
 
+        public Books BooksModel { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger, BookContext db)
         {
             _logger = logger;
             _db = db;
+            BooksModel = new Books() { Title ="test", Author = "Bipin" };
 
             _logger.LogInformation("lajsdlfjasdjf");
         }

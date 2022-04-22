@@ -8,11 +8,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                @foreach ( Books item in Model.Books) { 
+                @foreach (Books item in Model.Books) {
                     <div class="book-listing__item">
                         <h2>@item.Title</h2>
                         <span>Author: @item.Author</span>
-                        <a href="/@item.Id">Read More</a>
+                        <a asp-page="Book" asp-route-Id="@item.Id" class="btn btn-primary">Read More</a>
                     </div>
                 }
             </div>

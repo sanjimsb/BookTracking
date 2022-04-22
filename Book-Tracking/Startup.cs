@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Book_Tracking_Context;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 
 namespace Book_Tracking
 {
@@ -50,6 +51,7 @@ namespace Book_Tracking
 
             app.Use(async (context, next) =>
             {
+                context.Response.GetTypedHeaders().CacheControl = 
                 new Microsoft.Net.Http.Headers.CacheControlHeaderValue()
                 {
                     Public = true,
