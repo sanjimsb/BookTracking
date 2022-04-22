@@ -25,8 +25,18 @@ namespace Book_Tracking.Pages
             _logger.LogInformation("lajsdlfjasdjf");
         }
 
+        [RequireHttps]
         public void OnGet([FromQuery] int Id)
         {
+            if (_db.BookCategories.Count() > 0)
+            {
+                ViewData["hasCat"] = true;
+            }
+            if (_db.CategoryTypes.Count() > 0)
+            {
+                ViewData["hasCatType"] = true;
+            }
+            ViewData["currentUrl"] = string.Format("{0}://{1}",HttpContext.Request.Scheme, HttpContext.Request.Host);
             Book = _db.Books.Where(bk => bk.Id == Id).FirstOrDefault();
         }
     }

@@ -1,14 +1,13 @@
 ﻿@using Book_Tracking_Models
 @model Books
 
-
 {
     "@@context" : "http://schema.org/",
     "@@type" : "Book",
     "name" : "@Model.Title",
     "descrition" : "",
     "author" : "@Model.Author",
-    "url" : ""
-}
+    "url" : "@ViewData["currentUrl"]/Book/?Id=@Model.Id"
+    }
 
 

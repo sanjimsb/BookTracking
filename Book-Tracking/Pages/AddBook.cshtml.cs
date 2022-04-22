@@ -25,6 +25,14 @@ namespace Book_Tracking.Pages
 
         public void OnGet()
         {
+            if (_db.BookCategories.Count() > 0)
+            {
+                ViewData["hasCat"] = true;
+            }
+            if (_db.CategoryTypes.Count() > 0)
+            {
+                ViewData["hasCatType"] = true;
+            }
             BookCategories = _db.BookCategories.Select(cat => cat).ToList();
         }
 
