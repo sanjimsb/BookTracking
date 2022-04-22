@@ -36,11 +36,11 @@ namespace Book_Tracking.Pages
             BookCategories = _db.BookCategories.Select(cat => cat).ToList();
         }
 
-        public async void OnPost()
+        public void OnPost()
         {
             BookCategories = _db.BookCategories.Select(cat => cat).ToList();
             _db.Add<Books>(Book);
-            await _db.SaveChangesAsync();
+            _db.SaveChangesAsync();
         }
     }
 }

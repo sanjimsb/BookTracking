@@ -6,18 +6,30 @@
 
 <section class="book-listing">
     <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                @foreach (Books item in Model.Books) {
-                    <div class="book-listing__item">
-                        <h2>@item.Title</h2>
-                        <div class="details-wrap">
-                            <span>Author: @item.Author</span>
-                            <a asp-page="Book" asp-route-Id="@item.Id" class="btn btn-primary">Read More</a>
+        <div class="row justify-content-center">
+            @if (Model.Books.Count() > 0)
+            {
+                @foreach (Books item in Model.Books)
+                {
+                    <div class="col-md-4 mt-5">
+                        <div class="book-listing__item">
+                            <h2>@item.Title</h2>
+                            <div class="details-wrap">
+                                <span>Author: @item.Author</span>
+                                <a asp-page="Book" asp-route-Id="@item.Id" class="btn btn-primary">Read More</a>
+                            </div>
                         </div>
                     </div>
                 }
+            }
+            else
+            {
+                <div class="col-md-12">
+                    <div class="book-listing__item">
+                        <h2>There isn't Any Books Please first Add the Book Category Type and Book Categories and Books </h2>
+                    </div>
+                </div>
+            }
             </div>
         </div>
-    </div>
 </section>
